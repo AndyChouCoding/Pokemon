@@ -5,9 +5,11 @@ interface MainProps {
 const Layout = ({ children }: MainProps) => {
   return (
     <>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
+      <div className="">
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </div>
     </>
   );
 };
@@ -18,9 +20,10 @@ const Header = () => {
     <>
       <div className="">
         <div>Header</div>
-        <div><Navbar /></div>
+        <div>
+          <Navbar />
+        </div>
       </div>
-      
     </>
   );
 };
@@ -28,7 +31,11 @@ const Navbar = () => {
   return <>Navbar</>;
 };
 const Main = ({ children }: MainProps) => {
-  return <>{children}</>;
+  return (
+    <>
+      <div>{children}</div>
+    </>
+  );
 };
 const Footer = () => {
   return <>Footer</>;
