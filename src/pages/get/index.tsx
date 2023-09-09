@@ -1,9 +1,12 @@
+import Layout from "../components/layout";
 
 
 
 const Get = () => {
     return<>
-    Get
+        <Layout>
+            Get
+        </Layout>
     </>
 }
 export default Get;
