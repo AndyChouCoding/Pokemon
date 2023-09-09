@@ -26,7 +26,7 @@ const Btn: React.FC = () => {
 
   return (
     <>
-      <div className="flex">
+      <div className="flex justify-between mt-5 w-[600px]">
         <button
           onClick={handleLeftClick}
           className=" w-[100px] h-[100px] rounded-full border-2 border-black
