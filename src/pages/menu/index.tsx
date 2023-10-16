@@ -14,7 +14,7 @@ const Menu = () => {
         </div>
         <div className="flex justify-around h-[30%] bg-gray-100 p-5">
           <div
-            className="flex justify-center items-center w-40 h-40"
+            className="flex justify-center items-center h-[100%]"
             onClick={() => {
               go("/pk");
             }}
@@ -22,7 +22,7 @@ const Menu = () => {
             <img className=" w-full h-full" src={pkImg}></img>
           </div>
           <div
-            className="flex justify-center items-center w-40 h-40"
+            className="flex justify-center items-center h-[100%]"
             onClick={() => {
               go("/pkGet");
             }}
@@ -30,7 +30,7 @@ const Menu = () => {
             <img className=" w-full h-full" src={pkGetImg}></img>
           </div>
           <div
-            className="flex justify-center items-center w-40 h-40"
+            className="flex justify-center items-center h-[100%]"
             onClick={() => {
               go("/get");
             }}

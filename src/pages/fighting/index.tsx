@@ -5,9 +5,9 @@ const Fighting = () => {
   return (
     <>
         <Layout>
-            <div>敵方的畫面</div>
-            <div>我方的畫面</div>
-            <div><Btn/></div>
+            <div className="flex justify-center items-center border-4 border-black h-[40%]">敵方的畫面</div>
+            <div className="flex justify-center items-center border-4 border-black h-[40%]">我方的畫面</div>
+            <div className="h-[20%]"><Btn/></div>
         </Layout>
     </>
   );

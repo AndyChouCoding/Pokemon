@@ -26,17 +26,18 @@ const Btn: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-between mt-5 w-[600px]">
+      <div className="flex items-center justify-around border-2 h-full">
         <button
           onClick={handleLeftClick}
-          className=" w-[100px] h-[100px] rounded-full border-2 border-black
+          className="w-[150px] h-[150px] p-6 rounded-full border-2 border-black
             "
         >
           left
         </button>
+        <div className=" text-[400%]">999%</div>
         <button
           onClick={handleRightClick}
-          className=" w-[100px] h-[100px] rounded-full border-2 border-black
+          className="w-[150px] h-[150px] p-6 rounded-full border-2 border-black
             "
         >
           right
