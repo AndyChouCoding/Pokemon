@@ -8,10 +8,14 @@ import Fighting from "./pages/fighting";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
+  { path:"/account", element:<div></div>},
+  { path:"/registerAccount", element:<div></div>},
+  { path:"/forget", element:<div></div>},
   { path:"/menu", element:<Menu/>},
   { path: "/pk", element: <Pk/> },
   { path: "/pkGet", element: <PkGet/> },
   { path: "get", element: <Get/> },
   { path: "fighting", element: <Fighting/> },
+  { path:"/result", element:<div></div>},
 ]);
 export default router;
