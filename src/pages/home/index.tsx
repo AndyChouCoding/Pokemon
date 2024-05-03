@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <>
         <Layout>
-            Home
+            <div className="flex justify-center items-center h-[85vh]" onClick={()=>{go('/game_mode')}}>
+              <p className=" text-3xl">請點擊任意鍵開始</p>
+            </div>
         </Layout>
     </>
   );

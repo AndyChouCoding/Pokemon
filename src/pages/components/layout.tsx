@@ -1,11 +1,16 @@
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import Logo from "../../img/all/Gaole.png";
 
 
 interface MainProps {
   children: React.ReactNode;
-}
+  
+};
 
+interface UserControlBtnsProps {
+  setIsLoggedIn:(isLoggedIn:boolean) => void;
+}
 
 const ControlBtns = () => {
   const go = useNavigate();
@@ -18,8 +23,33 @@ const ControlBtns = () => {
   </>
 }
 
+const UserControlBtns = ({ setIsLoggedIn}:UserControlBtnsProps) => {
+  const go = useNavigate();
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('authTokeon');
+    go('/');
+  }
+  return<>
+    <div className="flex justify-around text-xs">
+      <button className="mx-1 p-1 text-gray-500" onClick={()=>{}}>Bag</button>
+      <button className="mx-1 p-1 text-gray-500" onClick={logout}>Logout</button>
+    </div>
+  </>
+}
+
+
 const Layout = ({ children }: MainProps) => {
   const go = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const renderButtons = () => {
+    if(isLoggedIn) {
+      return <UserControlBtns setIsLoggedIn={setIsLoggedIn} />;
+    } else {
+      return <ControlBtns />;
+    }
+  };
+
   return (
     <>
       <div className="">
@@ -33,7 +63,7 @@ const Layout = ({ children }: MainProps) => {
           <div className="">
             <div className="flex justify-between">
               <div></div>
-              <div><ControlBtns/></div>
+              <div>{renderButtons()}</div>
             </div>
             <div>{children}</div>
           </div>
