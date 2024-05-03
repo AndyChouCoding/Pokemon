@@ -2,11 +2,12 @@ import Layout from "../components/layout";
 
 
 
-const PkGet = () => {
+const Forget = () => {
     return<>
         <Layout>
-            PKGet
+        <div>Forget</div>
         </Layout>
     </>
 }
-export default PkGet;
+
+export default Forget;

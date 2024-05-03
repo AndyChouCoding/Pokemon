@@ -1,17 +1,15 @@
 import { createBrowserRouter } from "react-router-dom";
+import Forget from "./pages/forget";
 import Home from "./pages/home";
-import Pk from "./pages/pk";
-import PkGet from "./pages/pkget";
-import Get from "./pages/get";
-import Menu from "./pages/menu";
-import Fighting from "./pages/fighting";
+import LoginPage from "./pages/login";
+import Register from "./pages/register";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path:"/menu", element:<Menu/>},
-  { path: "/pk", element: <Pk/> },
-  { path: "/pkGet", element: <PkGet/> },
-  { path: "get", element: <Get/> },
-  { path: "fighting", element: <Fighting/> },
+  { path: "/login", element: <LoginPage/> },
+  { path: "/Register", element:<Register/> },
+  { path: "/Forget", element:<Forget/> },
+
 ]);
 export default router;

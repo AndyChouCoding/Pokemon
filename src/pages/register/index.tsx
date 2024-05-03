@@ -1,12 +1,12 @@
 import Layout from "../components/layout";
 
 
-
-const Get = () => {
+const Register = () => {
     return<>
         <Layout>
-            Get
+        <div>Register</div>
         </Layout>
     </>
 }
-export default Get;
+
+export default Register;
