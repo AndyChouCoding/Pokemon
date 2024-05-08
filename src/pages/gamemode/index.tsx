@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
-import GetMode from "../../img/home/get.jpeg"
-import PKMode from "../../img/home/pk.jpeg"
-import PkGetMode from "../../img/home/pkGet.jpeg"
+import GetMode from "../../img/home/get.png"
+import PKMode from "../../img/home/pk.png"
+import PkGetMode from "../../img/home/pkGet.png"
 import { useNavigate } from "react-router";
 
 const GameMode = () => {

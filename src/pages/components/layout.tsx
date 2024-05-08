@@ -2,48 +2,74 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import Logo from "../../img/all/Gaole.png";
 
-
 interface MainProps {
   children: React.ReactNode;
-  
-};
+}
 
 interface UserControlBtnsProps {
-  setIsLoggedIn:(isLoggedIn:boolean) => void;
+  setIsLoggedIn: (isLoggedIn: boolean) => void;
 }
 
 const ControlBtns = () => {
   const go = useNavigate();
-  return<>
-    <div className="flex justify-around text-xs">
-      <button className="mx-1 p-1 text-gray-500" onClick={()=>{go('/login')}}>Login</button>
-      <button className="mx-1 p-1 text-gray-500" onClick={()=>{go('/register')}}>Register</button>
-      <button className="mx-1 p-1 text-gray-500" onClick={()=>{go('/forget')}}>Forget</button>
-    </div>
-  </>
-}
+  return (
+    <>
+      <div className="flex justify-around text-xs">
+        <button
+          className="mx-1 p-1 text-gray-500"
+          onClick={() => {
+            go("/login");
+          }}
+        >
+          Login
+        </button>
+        <button
+          className="mx-1 p-1 text-gray-500"
+          onClick={() => {
+            go("/register");
+          }}
+        >
+          Register
+        </button>
+        <button
+          className="mx-1 p-1 text-gray-500"
+          onClick={() => {
+            go("/forget");
+          }}
+        >
+          Forget
+        </button>
+      </div>
+    </>
+  );
+};
 
-const UserControlBtns = ({ setIsLoggedIn}:UserControlBtnsProps) => {
+const UserControlBtns = ({ setIsLoggedIn }: UserControlBtnsProps) => {
   const go = useNavigate();
   const logout = () => {
     setIsLoggedIn(false);
-    localStorage.removeItem('authTokeon');
-    go('/');
-  }
-  return<>
-    <div className="flex justify-around text-xs">
-      <button className="mx-1 p-1 text-gray-500" onClick={()=>{}}>Bag</button>
-      <button className="mx-1 p-1 text-gray-500" onClick={logout}>Logout</button>
-    </div>
-  </>
-}
-
+    localStorage.removeItem("authTokeon");
+    go("/");
+  };
+  return (
+    <>
+      <div className="flex justify-around text-xs">
+        <button className="mx-1 p-1 text-gray-500" onClick={() => {}}>
+          Bag
+        </button>
+        <button className="mx-1 p-1 text-gray-500" onClick={logout}>
+          Logout
+        </button>
+      </div>
+    </>
+  );
+};
 
 const Layout = ({ children }: MainProps) => {
   const go = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const renderButtons = () => {
-    if(isLoggedIn) {
+    if (isLoggedIn) {
       return <UserControlBtns setIsLoggedIn={setIsLoggedIn} />;
     } else {
       return <ControlBtns />;
@@ -54,8 +80,13 @@ const Layout = ({ children }: MainProps) => {
     <>
       <div className="">
         <div className="bg-red-500 h-[50vh]">
-          <div className="w-[13vh]" onClick={()=>{go('/')}}>
-          <img src={Logo} className="" alt="" />
+          <div
+            className="w-[13vh]"
+            onClick={() => {
+              go("/");
+            }}
+          >
+            <img src={Logo} className="" alt="" />
           </div>
         </div>
         <div className="bg-black h-[3vh] relative"></div>
@@ -63,7 +94,9 @@ const Layout = ({ children }: MainProps) => {
           <div className="">
             <div className="flex justify-between">
               <div></div>
-              <div>{renderButtons()}</div>
+              <div>
+                <ControlBtns />
+              </div>
             </div>
             <div>{children}</div>
           </div>
