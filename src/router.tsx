@@ -15,9 +15,9 @@ const router = createBrowserRouter([
   { path: "/login", element: <LoginPage/> },
   { path: "/register", element:<Register/> },
   { path: "/forget", element:<Forget/> },
-  { path: "/game_mode", element:<GameMode/> },
-  { path: "/pkmode", element:<PkMode/> },
-  { path: "/pkgetmode", element:<PkGetMode/> },
+  { path: "/gameMode", element:<GameMode/> },
+  { path: "/pkMode", element:<PkMode/> },
+  { path: "/pkgetMode", element:<PkGetMode/> },
   { path: "/getMode", element:<GetMode/>, children:[{path:"/getMode/getModeResult" ,element:<GetModeResult/>}],},
 
 ]);

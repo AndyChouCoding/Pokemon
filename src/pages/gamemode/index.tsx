@@ -10,15 +10,15 @@ const GameMode = () => {
     <>
       <Layout>
         <div className="flex justify-around mt-[38vh] text-center text-[3vh]">
-          <div onClick={()=>{go('/getmode')}}>
+          <div onClick={()=>{go('/getMode')}}>
             <div><img className="w-[25vh]" src={GetMode} alt="" /></div>
             <div>快速捕獲</div>
           </div>
-          <div onClick={()=>{go('/pkmode')}}>
+          <div onClick={()=>{go('/pkMode')}}>
             <div><img className="w-[25vh]" src={PKMode} alt="" /></div>
             <div>活動對戰</div>
           </div>
-          <div onClick={()=>{go('/pkgetmode')}}>
+          <div onClick={()=>{go('/pkgetMode')}}>
             <div><img className="w-[25vh]" src={PkGetMode} alt="" /></div>
             <div>對戰捕獲</div>
           </div>
