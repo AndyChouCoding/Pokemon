@@ -6,12 +6,9 @@ const Home = () => {
   return (
     <>
         <Layout>
-          <div className="w-full h-full" onClick={() => {go("/menu");}}>
-            <div className="">
-              <img src="" alt="" />
+            <div className="flex justify-center items-center h-[85vh]" onClick={()=>{go('/game_mode')}}>
+              <p className=" text-3xl">請點擊任意鍵開始</p>
             </div>
-            <div className="flex justify-center mt-[60vh] text-[36px]">請點擊任意處開始遊戲</div>
-          </div>
         </Layout>
     </>
   );

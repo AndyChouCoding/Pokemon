@@ -1,21 +1,24 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
+import Forget from "./pages/forget";
+import GameMode from "./pages/gamemode";
+import GetMode from "./pages/getMode";
+import GetModeResult from "./pages/getMode/pages";
 import Home from "./pages/home";
-import Pk from "./pages/pk";
-import PkGet from "./pages/pkget";
-import Get from "./pages/get";
-import Menu from "./pages/menu";
-import Fighting from "./pages/fighting";
+import LoginPage from "./pages/login";
+import PkGetMode from "./pages/pkGetmode";
+import PkMode from "./pages/pkMode";
+import Register from "./pages/register";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path:"/account", element:<div></div>},
-  { path:"/registerAccount", element:<div></div>},
-  { path:"/forget", element:<div></div>},
-  { path:"/menu", element:<Menu/>},
-  { path: "/pk", element: <Pk/> },
-  { path: "/pkGet", element: <PkGet/> },
-  { path: "get", element: <Get/> },
-  { path: "fighting", element: <Fighting/> },
-  { path:"/result", element:<div></div>},
+  { path: "/login", element: <LoginPage/> },
+  { path: "/register", element:<Register/> },
+  { path: "/forget", element:<Forget/> },
+  { path: "/game_mode", element:<GameMode/> },
+  { path: "/pkmode", element:<PkMode/> },
+  { path: "/pkgetmode", element:<PkGetMode/> },
+  { path: "/getMode", element:<GetMode/>, children:[{path:"/getMode/getModeResult" ,element:<GetModeResult/>}],},
+
 ]);
 export default router;
