@@ -8,7 +8,7 @@ const GameMode = () => {
     const go = useNavigate();
   return (
     <>
-      <Layout>
+      <Layout  className={""}>
         <div className="flex justify-around mt-[38vh] text-center text-[3vh]">
           <div onClick={()=>{go('/getMode')}}>
             <div><img className="w-[25vh]" src={GetMode} alt="" /></div>

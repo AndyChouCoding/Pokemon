@@ -8,6 +8,7 @@ import LoginPage from "./pages/login";
 import PkGetMode from "./pages/pkGetmode";
 import PkMode from "./pages/pkMode";
 import Register from "./pages/register";
+import ChangePassword from "./pages/changePassword";
 
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   { path: "/login", element: <LoginPage/> },
   { path: "/register", element:<Register/> },
   { path: "/forget", element:<Forget/> },
+  { path: "/changePassword", element:<ChangePassword/>},
   { path: "/gameMode", element:<GameMode/> },
   { path: "/pkMode", element:<PkMode/> },
   { path: "/pkgetMode", element:<PkGetMode/> },

@@ -4,6 +4,7 @@ import Logo from "../../img/all/Gaole.png";
 
 interface MainProps {
   children: React.ReactNode;
+  className?: string;
 }
 
 interface UserControlBtnsProps {
@@ -14,9 +15,9 @@ const ControlBtns = () => {
   const go = useNavigate();
   return (
     <>
-      <div className="flex justify-around text-xs">
+      <div className="flex justify-around text-xs z-50 mt-2">
         <button
-          className="mx-1 p-1 text-gray-500"
+          className="mx-1 p-1 text-black"
           onClick={() => {
             go("/login");
           }}
@@ -24,7 +25,7 @@ const ControlBtns = () => {
           Login
         </button>
         <button
-          className="mx-1 p-1 text-gray-500"
+          className="mx-1 p-1 text-black "
           onClick={() => {
             go("/register");
           }}
@@ -32,7 +33,7 @@ const ControlBtns = () => {
           Register
         </button>
         <button
-          className="mx-1 p-1 text-gray-500"
+          className="mx-1 p-1 text-black "
           onClick={() => {
             go("/forget");
           }}
@@ -53,11 +54,11 @@ const UserControlBtns = ({ setIsLoggedIn }: UserControlBtnsProps) => {
   };
   return (
     <>
-      <div className="flex justify-around text-xs">
-        <button className="mx-1 p-1 text-gray-500" onClick={() => {}}>
+      <div className="flex justify-around text-xs mt-2">
+        <button className="mx-1 p-1 text-black " onClick={() => {}}>
           Bag
         </button>
-        <button className="mx-1 p-1 text-gray-500" onClick={logout}>
+        <button className="mx-1 p-1 text-black " onClick={logout}>
           Logout
         </button>
       </div>
@@ -65,7 +66,7 @@ const UserControlBtns = ({ setIsLoggedIn }: UserControlBtnsProps) => {
   );
 };
 
-const Layout = ({ children }: MainProps) => {
+const Layout = ({ children, className }: MainProps) => {
   const go = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const renderButtons = () => {
@@ -79,7 +80,7 @@ const Layout = ({ children }: MainProps) => {
   return (
     <>
       <div className="">
-        <div className="bg-red-500 h-[50vh]">
+        <div className="bg-red-500 h-[50vh] flex justify-between">
           <div
             className="w-[13vh]"
             onClick={() => {
@@ -88,16 +89,13 @@ const Layout = ({ children }: MainProps) => {
           >
             <img src={Logo} className="" alt="" />
           </div>
-        </div>
-        <div className="bg-black h-[3vh] relative"></div>
-        <div className="border-4 border-solid border-black bg-white rounded-md w-[90%] h-[90%] absolute top-[5%] left-[5%] ">
           <div className="">
-            <div className="flex justify-between">
-              <div></div>
-              <div>
-                <ControlBtns />
-              </div>
-            </div>
+            <ControlBtns />
+          </div>
+        </div>
+        <div className="bg-black h-[3vh] "></div>
+        <div className="border-4 border-solid border-black bg-white rounded-md w-[90%] h-[90%] absolute top-[5%] left-[5%] ">
+          <div className={className}>
             <div>{children}</div>
           </div>
         </div>
