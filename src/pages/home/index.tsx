@@ -7,14 +7,10 @@ const Home = () => {
   return (
     <>
       <Layout className="home_page_bg">
-        <div
-          className="flex justify-center items-center h-[89vh]  "
-          onClick={() => {
-            go("/gameMode");
-          }}
-        >
-          <p className="p-4 bg-slate-300 text-3xl text-[black] rounded-md absolute bottom-20 w-[100%] text-center opacity-60">
-            請點擊任意鍵開始
+        <div className=" relative">
+          <div onClick={()=>{go("/login")}} className="h-[88vh]"></div>
+          <p className=" absolute top-[60vh] p-2 text-center bg-slate-200 opacity-70 w-[100%]">
+            請點擊任意處開始
           </p>
         </div>
       </Layout>
