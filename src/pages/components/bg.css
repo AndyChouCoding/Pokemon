@@ -1,10 +1,10 @@
 .home_page_bg {
     background-image: url(../../img/all/bg.jpeg);
-    background-size: cover; 
+    background-size:cover; 
     min-height: 100%; 
     align-items: center;
     justify-content: center;
-    z-index: -999;
+    background-position: 90% 90%;
 }
 
 .login_page_bg {
@@ -13,5 +13,21 @@
     min-height: 100%; 
     align-items: center;
     justify-content: center;
-    z-index: -999;
+}
+
+.mode_page_bg {
+        background-image: url(../../img/home/modeBG.png);
+        background-size:cover; 
+        min-height: 100%; 
+        align-items: center;
+        justify-content: center;
+}
+
+.get_Mode_Bg {
+    background-image: url(../../img/getMode/getModeBg.jpeg);
+    background-size:cover; 
+    min-height: 100%; 
+    align-items: center;
+    justify-content: center;
+    background-position: 80% 10%;
 }
