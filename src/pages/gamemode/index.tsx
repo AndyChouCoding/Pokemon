@@ -17,12 +17,12 @@ const GameMode = () => {
     { src: PKMode, alt: "活動對戰", path: "/pkMode", label: "活動對戰" },
     { src: PkGetMode, alt: "對戰捕獲", path: "/pkgetMode", label: "對戰捕獲" },
   ];
-  const prevSlide = () => {
+  const nextSlide = () => {
     setCurrentMode(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
-  const nextSlide = () => {
+  const prevSlide = () => {
     setCurrentMode((prevIndex) => (prevIndex + 1) % images.length);
   };
   const getDisplayIndices = (currentMode: number, length: number) => {
@@ -37,7 +37,12 @@ const GameMode = () => {
       setIsMobile(window.innerWidth <= 768);
     };
     window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+
   const handleTouchStart = (e: any) => {
     setTouchStartX(e.touches[0].clientX);
   };
@@ -89,7 +94,7 @@ const GameMode = () => {
           </div>
           {!isMobile && (
             <button
-              onClick={prevSlide}
+              onClick={nextSlide}
               className="w-[30px] h-[30px] rounded-full  m-1 bg-gray-300"
             >
               {">"}
