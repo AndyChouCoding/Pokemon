@@ -7,8 +7,8 @@ const GetMode = () => {
     const go = useNavigate()
     return<>
         <Layout className="get_Mode_Bg">
-            <div className="flex justify-center text-center">
-                <div className=" w-[350px] mt-[20vh]">
+            <div className="flex justify-center text-center  ">
+                <div className=" w-[350px] mt-[20px] ">
                     <div className=" ">
                         <div className=" flex justify-center items-center mb-10">
                             <div className="w-[70px] h-[10px] bg-white rounded-full"></div>
