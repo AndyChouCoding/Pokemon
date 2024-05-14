@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <Layout className="home_page_bg">
         <div
-          className="flex justify-center items-center h-[85vh] relative"
+          className="flex justify-center items-center  "
           onClick={() => {
             go("/gameMode");
           }}
