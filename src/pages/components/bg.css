@@ -39,7 +39,7 @@
     min-height: 100%; 
     align-items: center;
     justify-content: center;
-    
+    background-position: 20% 100%;
 }
 .fightting_bg_they {
     background-image: url(../../img/pkgetmode/theyBg.png);
@@ -47,4 +47,5 @@
     min-height: 100%; 
     align-items: center;
     justify-content: center;
+    background-position: 20% 100%;
 }

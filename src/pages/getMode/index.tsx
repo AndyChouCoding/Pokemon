@@ -9,7 +9,7 @@ const GetMode = () => {
     return<>
         <Layout className="get_Mode_Bg">
             <div className="flex justify-center text-center  ">
-                <div className=" w-[350px] mt-[3vh] sm:mt-[20vh] ">
+                <div className=" w-[350px] mt-[2vh] sm:mt-[20vh] ">
                     <div className="">
                         <div className=" flex justify-center items-center mb-10">
                             <div className="w-[70px] h-[10px] bg-white rounded-full"></div>
