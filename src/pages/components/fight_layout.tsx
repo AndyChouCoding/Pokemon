@@ -28,7 +28,7 @@ const FightLayout = () => {
             <div className="w-[30px] h-[30px] mx-[1px] border-2 border-blue-500 bg-white rounded-full absolute top-2 z-[99]">3</div>
             <div className="w-[30px] h-[30px] mx-[1px] border-2 border-blue-500 bg-white rounded-full absolute top-2 left-6 z-[99]">4</div>
         </div>
-        <div className="h-[43vh] fightting_bg_my relative">
+        <div className="h-[285px] fightting_bg_my relative">
             <div></div>
             <FightBtn count={count} setCount={setCount}/>
         </div>
