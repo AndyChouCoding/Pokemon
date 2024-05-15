@@ -5,6 +5,7 @@ import Grass from "../../img/all/grass.png"
 
 const GetMode = () => {
     const go = useNavigate()
+    const getResult = () => {go('/getMode/GetModeResult')}
     return<>
         <Layout className="get_Mode_Bg">
             <div className="flex justify-center text-center  ">
@@ -19,10 +20,10 @@ const GetMode = () => {
                         </div>
                         <div className="">
                             <div className=" mx-auto mb-5 w-[300px] h-[300px] bg-white rounded-full flex justify-center items-center">
-                                <div className=" bg-pink-300 w-[280px] h-[280px] rounded-full flex justify-center items-center text-[white]"></div>
+                                <div onClick={getResult} className=" bg-pink-300 w-[280px] h-[280px] rounded-full flex justify-center items-center text-[white]"></div>
                             </div>
                         </div>
-                        <div className="h-[30px] p-2 rounded-lg bg-slate-200 opacity-90"></div>
+                        <div className="h-[30px] p-2 rounded-lg bg-slate-200 opacity-90">Pokemon name</div>
                     </div>
                     <img onClick={()=>{console.log('get pokemon')}} className="w-[100%] " src={Grass} alt="" />
                 </div>

@@ -9,6 +9,10 @@ import PkGetMode from "./pages/pkGetmode";
 import PkMode from "./pages/pkMode";
 import Register from "./pages/register";
 import ChangePassword from "./pages/changePassword";
+import FightingChoose from "./pages/pkGetmode/pages/fighting_choose";
+// import Fighting from "./pages/pkGetmode/pages/fighting";
+
+
 
 
 const router = createBrowserRouter([
@@ -20,7 +24,10 @@ const router = createBrowserRouter([
   { path: "/gameMode", element:<GameMode/> },
   { path: "/pkMode", element:<PkMode/> },
   { path: "/pkgetMode", element:<PkGetMode/> },
-  { path: "/getMode", element:<GetMode/>, children:[{path:"/getMode/getModeResult" ,element:<GetModeResult/>}],},
+  { path: "/pkgetMode/fightingChoose", element:<FightingChoose/> },
+  { path: "/pkgetMode/fighting", element:<>fight</> },
+  { path: "/getMode", element:<GetMode/>, },
+  { path: "/getMode/getModeResult" ,element:<GetModeResult/>}
 
 ]);
 export default router;
