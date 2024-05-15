@@ -1,15 +1,14 @@
-import FightBtn from "../../components/fight_btn";
+
+import FightLayout from "../../components/fight_layout";
 import Layout from "../../components/layout";
 
 
 
-const Fight =() =>{
+const Fighting =() =>{
     return<>
         <Layout>
-            <div>
-                <FightBtn/>
-            </div>
+            <FightLayout/>
         </Layout>
     </>
 }
-export default Fight;
+export default Fighting;

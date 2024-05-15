@@ -17,11 +17,11 @@
 }
 
 .mode_page_bg {
-        background-image: url(../../img/home/modeBG.png);
-        background-size:cover; 
-        min-height: 100%; 
-        align-items: center;
-        justify-content: center;
+    background-image: url(../../img/home/modeBG.png);
+    background-size:cover; 
+    min-height: 100%; 
+    align-items: center;
+    justify-content: center;
 }
 
 .get_Mode_Bg {
@@ -31,4 +31,20 @@
     align-items: center;
     justify-content: center;
     background-position: 80% 10%;
+}
+
+.fightting_bg_my {
+    background-image: url(../../img/pkgetmode/myBg.jpeg);
+    background-size:cover; 
+    min-height: 100%; 
+    align-items: center;
+    justify-content: center;
+    
+}
+.fightting_bg_they {
+    background-image: url(../../img/pkgetmode/theyBg.png);
+    background-size:cover; 
+    min-height: 100%; 
+    align-items: center;
+    justify-content: center;
 }
