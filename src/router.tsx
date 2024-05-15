@@ -10,7 +10,8 @@ import PkMode from "./pages/pkMode";
 import Register from "./pages/register";
 import ChangePassword from "./pages/changePassword";
 import FightingChoose from "./pages/pkGetmode/pages/fighting_choose";
-// import Fighting from "./pages/pkGetmode/pages/fighting";
+import Fighting from "./pages/pkGetmode/pages/fighting";
+
 
 
 
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
   { path: "/pkMode", element:<PkMode/> },
   { path: "/pkgetMode", element:<PkGetMode/> },
   { path: "/pkgetMode/fightingChoose", element:<FightingChoose/> },
-  { path: "/pkgetMode/fighting", element:<>fight</> },
+  { path: "/pkgetMode/fighting", element:<Fighting/> },
   { path: "/getMode", element:<GetMode/>, },
   { path: "/getMode/getModeResult" ,element:<GetModeResult/>}
 

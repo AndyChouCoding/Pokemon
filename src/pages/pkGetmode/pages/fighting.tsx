@@ -1,3 +1,4 @@
+import FightBtn from "../../components/fight_btn";
 import Layout from "../../components/layout";
 
 
@@ -5,7 +6,9 @@ import Layout from "../../components/layout";
 const Fight =() =>{
     return<>
         <Layout>
-            Fight
+            <div>
+                <FightBtn/>
+            </div>
         </Layout>
     </>
 }
